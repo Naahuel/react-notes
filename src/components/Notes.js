@@ -1,13 +1,15 @@
 import React from 'react';
 import { connect } from "react-redux";
 import Note from './Note';
+import Empty from './common/Empty';
+
 
 const Notes = ({ notes }) => {
   return (
     <div className="Notes">
       { notes && notes.length
         ? notes.map(note =>  <Note {...note} /> )
-        : 'No notes'
+        : <Empty>No notes</Empty>
       }
     </div>
   );

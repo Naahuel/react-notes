@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { addNote, showAddNoteModal, hideAddNoteModal } from '../actions';
+import Button from './common/Button';
 
 class AddNote extends Component {
 
   render() {
     return (
       <div className="Notes">
-       <button onClick={this.props.showAddNoteModal}>Add note</button>
+       <Button type="save" onClick={this.props.showAddNoteModal}>Add note</Button>
 
         { this.props.addNoteModal.showModal &&
           <div className="AddNoteModal">
             <h2>Add a new note!</h2>
             <input type="text" />
             <textarea></textarea>
-            <button onClick={this.props.hideAddNoteModal}>Save</button>
+            <Button type="save" onClick={this.props.hideAddNoteModal}>Save</Button>
           </div>
         }
       </div>
