@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { addNote } from '../actions';
 import Button from './common/Button';
+import Modal from './common/Modal';
 
 class AddNote extends Component {
   constructor(props) {
@@ -49,12 +50,12 @@ class AddNote extends Component {
        <Button type="save" onClick={this.toggleModal}>Add note</Button>
 
         { this.state.showModal &&
-          <div className="AddNoteModal">
+          <Modal>
             <h2>Add a new note!</h2>
             <input onChange={this.handleTitleChange} type="text" value={this.state.title} />
             <textarea onChange={this.handleContentChange} value={this.state.content} />
             <Button type="save" onClick={this.handleNoteSave}>Save</Button>
-          </div>
+          </Modal>
         }
       </div>
     );
