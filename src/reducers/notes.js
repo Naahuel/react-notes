@@ -1,10 +1,6 @@
 import { actions } from "../constants";
 
-const initialState = [{
-  id: 1,
-  title: 'test',
-  content: 'Fuck you'
-}];
+const initialState = [];
 
 export default function(state = initialState, action) {
   switch (action.type) {

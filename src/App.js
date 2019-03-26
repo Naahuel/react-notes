@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Notes from './components/Notes';
+import AddNote from './components/AddNote';
 
 class App extends Component {
   render() {
@@ -7,7 +8,7 @@ class App extends Component {
       <div className="App">
         <header>
           <h1>My Notes</h1>
-          <button>Add note</button>
+          <AddNote />
         </header>
         <Notes />
       </div>
