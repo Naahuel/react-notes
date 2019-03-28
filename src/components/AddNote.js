@@ -13,19 +13,14 @@ class AddNote extends Component {
       title: '',
       content: ''
     }
-
-    this.toggleModal = this.toggleModal.bind(this);
-    this.handleNoteSave = this.handleNoteSave.bind(this);
-    this.handleTitleChange = this.handleTitleChange.bind(this);
-    this.handleContentChange = this.handleContentChange.bind(this);
   }
 
-  toggleModal() {
+  toggleModal = () => {
     /** Hide or show the modal */
     this.setState({showModal: !this.state.showModal});
   }
 
-  handleNoteSave() {
+  handleNoteSave = () => {
     /** Save the note */
     if( this.state.title && this.state.content ) {
       this.toggleModal();
@@ -34,12 +29,12 @@ class AddNote extends Component {
     }
   }
 
-  handleTitleChange(e) {
+  handleTitleChange = (e) => {
     /** Update the title */
     this.setState( {title: e.target.value} );
   }
 
-  handleContentChange(e) {
+  handleContentChange = (e) => {
     /** Update the content */
     this.setState( {content: e.target.value} );
   }
